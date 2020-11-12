@@ -60,7 +60,7 @@ public interface ProdutoService {
 	 * Método para atualizar um produto.
 	 * 
 	 * @param produto
-	 * @param obj
+	 * @param novoProduto
 	 */
 	void novoProduto(Produto produto, Produto novoProduto);
 }
