@@ -53,10 +53,9 @@ public class ProdutoServiceImpl implements ProdutoService {
 	}
 
 	@Override
-	public void novoProduto(Produto produto, Produto obj) {
-		produto.setNome(obj.getNome());
-		produto.setQuantidade(obj.getQuantidade());
+	public void novoProduto(Produto produto, Produto novoProduto) {
+		produto.setNome(novoProduto.getNome());
+		produto.setQuantidade(novoProduto.getQuantidade());
 		produto.setDataCadastro(new Date());
 	}
-
 }

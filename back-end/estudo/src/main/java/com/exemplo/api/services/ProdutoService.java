@@ -62,5 +62,5 @@ public interface ProdutoService {
 	 * @param produto
 	 * @param obj
 	 */
-	void novoProduto(Produto produto, Produto obj);
+	void novoProduto(Produto produto, Produto novoProduto);
 }
