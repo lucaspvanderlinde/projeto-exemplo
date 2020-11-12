@@ -20,7 +20,7 @@ public class ProdutoServiceImpl implements ProdutoService {
 	private ProdutoRepository produtoRepository;
 	
 	@Override
-	public List<Produto> findAll() {
+	public List<Produto> buscarTodos() {
 		log.info("Buscanto todos os produtos");
 		return produtoRepository.findAll();
 	}
@@ -42,20 +42,21 @@ public class ProdutoServiceImpl implements ProdutoService {
 	public Produto atualizar(Long id, Produto obj) {
 		log.info("Atualizando produto: {}", obj);
 		Produto produto = produtoRepository.getOne(id);
-		atualizar(produto, obj);
+		novoProduto(produto, obj);
 		return produtoRepository.save(produto);
 	}
 	
-	private void atualizar(Produto produto, Produto obj) {
-		produto.setNome(obj.getNome());
-		produto.setQuantidade(obj.getQuantidade());
-		produto.setDataCadastro(new Date());
-	}
-
 	@Override
 	public void delete(Long id) {
 		log.info("Deletando uma empresa: {}", id);
 		this.produtoRepository.deleteById(id);
+	}
+
+	@Override
+	public void novoProduto(Produto produto, Produto obj) {
+		produto.setNome(obj.getNome());
+		produto.setQuantidade(obj.getQuantidade());
+		produto.setDataCadastro(new Date());
 	}
 
 }

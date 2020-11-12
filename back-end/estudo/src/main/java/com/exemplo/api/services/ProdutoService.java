@@ -16,7 +16,7 @@ public interface ProdutoService {
 	 * @return List<Produto>
 	 * 
 	 */
-	List<Produto> findAll();
+	List<Produto> buscarTodos();
 	
 	/**
 	 * 
@@ -54,4 +54,13 @@ public interface ProdutoService {
 	 * 
 	 */
 	void delete(Long id);
+	
+	/**
+	 * 
+	 * Método para atualizar um produto.
+	 * 
+	 * @param produto
+	 * @param obj
+	 */
+	void novoProduto(Produto produto, Produto obj);
 }
