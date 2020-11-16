@@ -17,23 +17,31 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@NoArgsConstructor @AllArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
-@Table(name = "produto") 
+@Table(name = "produto")
 public class Produto implements Serializable {
 
 	private static final long serialVersionUID = -3266463164979693656L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Getter private Long id;
-	
+	@Getter
+	private Long id;
+
 	@Column(name = "nome", nullable = false)
-	@Getter @Setter private String nome;
-	
+	@Getter
+	@Setter
+	private String nome;
+
 	@Column(name = "quantidade", nullable = false)
-	@Getter @Setter private int quantidade;
-	
+	@Getter
+	@Setter
+	private int quantidade;
+
 	@Column(name = "data_cadastro", nullable = false)
-	@Getter @Setter private Date dataCadastro;
+	@Getter
+	@Setter
+	private Date dataCadastro;
 }

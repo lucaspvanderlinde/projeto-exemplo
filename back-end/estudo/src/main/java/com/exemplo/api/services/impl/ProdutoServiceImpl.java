@@ -15,12 +15,12 @@ import com.exemplo.api.services.ProdutoService;
 
 @Service
 public class ProdutoServiceImpl implements ProdutoService {
-	
+
 	private static final Logger log = LoggerFactory.getLogger(ProdutoServiceImpl.class);
 
 	@Autowired
 	private ProdutoRepository produtoRepository;
-	
+
 	@Override
 	public List<Produto> buscarTodos() {
 		log.info("Buscanto todos os produtos");
@@ -47,7 +47,7 @@ public class ProdutoServiceImpl implements ProdutoService {
 		novoProduto(produto, obj);
 		return produtoRepository.save(produto);
 	}
-	
+
 	@Override
 	public void delete(Long id) {
 		log.info("Deletando uma empresa: {}", id);
