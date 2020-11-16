@@ -46,7 +46,7 @@ public interface ProdutoService {
 	void delete(Long id);
 
 	/**
-	 * Método para atualizar um produto.
+	 * Método auxiliar para atualizar um produto.
 	 * 
 	 * @param produto
 	 * @param novoProduto
