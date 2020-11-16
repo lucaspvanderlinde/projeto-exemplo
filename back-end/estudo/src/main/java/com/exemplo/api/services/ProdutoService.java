@@ -3,11 +3,8 @@ package com.exemplo.api.services;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
-
 import com.exemplo.api.entities.Produto;
 
-@Service
 public interface ProdutoService {
 	
 	/**
