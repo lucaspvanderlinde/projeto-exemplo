@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -43,5 +45,6 @@ public class Produto implements Serializable {
 	@Column(name = "data_cadastro", nullable = false)
 	@Getter
 	@Setter
+	@JsonFormat(pattern="dd-MM-yyyy")
 	private Date dataCadastro;
 }
