@@ -1,0 +1,18 @@
+<nz-table #outBordered nzOuterBordered nzFooter="Footer" nzTitle="Lista de Produtos" [nzData]="produtos">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Quantidade</th>
+            <th>Data de cadastro</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of outBordered.data">
+            <td>{{ data.nome }}</td>
+            <td>{{ data.quantidade }}</td>
+            <td>{{ data.dataCadastro }}</td>
+            <td>ações</td>
+        </tr>
+    </tbody>
+</nz-table>
