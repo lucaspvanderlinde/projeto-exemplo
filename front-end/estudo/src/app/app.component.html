@@ -2,17 +2,18 @@
   <nz-sider nzCollapsible nzWidth="200px">
     <div class="logo"></div>
     <ul nz-menu nzTheme="dark" nzMode="inline">
-      <li nz-submenu nzTitle="Cadastros" nzIcon="file-add">
+      <li nz-submenu nzTitle="Produto" nzIcon="folder">
         <ul>
-          <li nz-menu-item>Cadastro simples</li>
-          <li nz-menu-item>Cadastro vinculado</li>
+          <li nz-menu-item>Novo produto</li>
+          <li nz-menu-item>Lista de produtos</li>
         </ul>
       </li>
-      <li nz-submenu nzTitle="Pesquisas" nzIcon="file-search">
+      <li nz-submenu nzTitle="Empresa" nzIcon="folder">
         <ul>
-          <li nz-menu-item>Pesquisa simples</li>
-          <li nz-menu-item>Pesquisa vinculada</li>
-          <li nz-menu-item>Pesquisa com filtro</li>
+          <li nz-menu-item>Novo departamento</li>
+          <li nz-menu-item>Novo funcionário</li>
+          <li nz-menu-item>Lista de departamentos</li>
+          <li nz-menu-item>Lista de funcionários</li>
         </ul>
       </li>
     </ul>
@@ -21,11 +22,11 @@
     <nz-header></nz-header>
     <nz-content>
       <nz-breadcrumb>
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+        <nz-breadcrumb-item>Produto</nz-breadcrumb-item>
+        <nz-breadcrumb-item>Lista de produtos</nz-breadcrumb-item>
       </nz-breadcrumb>
       <div class="inner-content">
-        Projeto completo para estudo.
+        <app-produto-listar></app-produto-listar>
       </div>
     </nz-content>
     <nz-footer>Desenvolvido por Lucas Passos e Guilherme Araújo</nz-footer>
