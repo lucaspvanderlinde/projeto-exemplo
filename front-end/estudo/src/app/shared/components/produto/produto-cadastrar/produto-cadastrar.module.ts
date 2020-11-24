@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { ProdutoCadastrarRoutingModule } from './produto-cadastrar-routing.module';
 import { ProdutoCadastrarComponent } from './produto-cadastrar.component';
-import { FormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/modules/shared.module';
 
 
 @NgModule({
   declarations: [ProdutoCadastrarComponent],
   imports: [
-    CommonModule,
-    FormsModule,
-    ProdutoCadastrarRoutingModule
+    ProdutoCadastrarRoutingModule,
+    SharedModule
   ]
 })
 export class ProdutoCadastrarModule { }
