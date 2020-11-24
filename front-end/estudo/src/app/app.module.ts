@@ -16,23 +16,18 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzTableModule } from 'ng-zorro-antd/table';
 
-import { ProdutoCadastrarComponent } from './shared/components/produto/produto-cadastrar/produto-cadastrar.component';
-import { ProdutoListarComponent } from './shared/components/produto/produto-listar/produto-listar.component';
-
 registerLocaleData(pt);
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProdutoListarComponent,
-    ProdutoCadastrarComponent
+    AppComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
     BrowserAnimationsModule,
+    FormsModule,
     NzLayoutModule,
     NzBreadCrumbModule,
     NzMenuModule,

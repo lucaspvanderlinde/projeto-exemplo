@@ -4,8 +4,8 @@
     <ul nz-menu nzTheme="dark" nzMode="inline">
       <li nz-submenu nzTitle="Produto" nzIcon="folder">
         <ul>
-          <li nz-menu-item>Novo produto</li>
-          <li nz-menu-item>Lista de produtos</li>
+          <li nz-menu-item routerLink="/produto-cadastro">Novo produto</li>
+          <li nz-menu-item routerLink="/produto-listar">Lista de produtos</li>
         </ul>
       </li>
       <li nz-submenu nzTitle="Empresa" nzIcon="folder">
@@ -26,7 +26,7 @@
         <nz-breadcrumb-item>Lista de produtos</nz-breadcrumb-item>
       </nz-breadcrumb>
       <div class="inner-content">
-        <app-produto-listar></app-produto-listar>
+        <router-outlet></router-outlet>
       </div>
     </nz-content>
     <nz-footer>Desenvolvido por Lucas Passos e Guilherme Araújo</nz-footer>
