@@ -10,13 +10,13 @@
     <nz-form-item>
         <nz-form-label [nzSpan]="6" nzFor="quantidade">Quantidade</nz-form-label>
         <nz-form-control [nzSpan]="8">
-            <nz-input-number [nzMin]="1" [nzMax]="9999" [nzStep]="1" name="quantidade" id="quantidade"
-                [(ngModel)]="produto.quantidade"></nz-input-number>
+            <nz-input-number [(ngModel)]="produto.quantidade" [nzMin]="1" [nzMax]="9999" [nzStep]="1" name="quantidade" id="quantidade"
+                ></nz-input-number>
         </nz-form-control>
 
         <nz-form-label [nzSpan]="3" nzFor="dataCadastro">Data Cadastro</nz-form-label>
         <nz-form-control [nzSpan]="8">
-            <nz-date-picker [nzFormat]="dateFormat" (ngModelChange)="onChange($event)" name="dataCadastro" id="dataCadastro"
+            <nz-date-picker [nzFormat]="dateFormat" name="dataCadastro" id="dataCadastro"
                 [(ngModel)]="produto.dataCadastro"></nz-date-picker>
         </nz-form-control>
     </nz-form-item>

@@ -11,24 +11,20 @@ import { Produto } from 'src/app/shared/models/Produto';
 export class ProdutoCadastrarComponent implements OnInit {
 
   public produto: Produto = new Produto();  
-  dateFormat = 'dd/MM/yyyy';
+  public dateFormat = 'dd/MM/yyyy';
 
-  constructor(private produtoService: ProdutoService, private router: Router) { }
+  constructor(
+    private produtoService: ProdutoService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
 
-    this.produto.quantidade = 0;
-
-  }
-
-  public onChange(result: Date): void {
-    console.log('onChange: ', result);
   }
 
   public onSubmit() {
     this.produtoService.cadastrar(this.produto)
       .subscribe(data => {
-        console.log(data)
         this.produto = new Produto();
         this.irParaLista();
       },
@@ -39,6 +35,4 @@ export class ProdutoCadastrarComponent implements OnInit {
   public irParaLista() {
     this.router.navigate(['']);
   }
-
-
 }

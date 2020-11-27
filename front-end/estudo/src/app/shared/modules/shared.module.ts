@@ -11,6 +11,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 
 @NgModule({
     exports: [
@@ -25,7 +26,8 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
         NzInputModule,
         NzInputNumberModule,
         NzDatePickerModule,
-        NzButtonModule
+        NzButtonModule,
+        NzIconModule
     ]
 })
 export class SharedModule{}
