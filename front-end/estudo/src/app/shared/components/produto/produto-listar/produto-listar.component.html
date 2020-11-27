@@ -11,8 +11,11 @@
         <tr *ngFor="let data of outBordered.data">
             <td>{{ data.nome }}</td>
             <td>{{ data.quantidade }}</td>
-            <td>{{ data.dataCadastro }}</td>
-            <td>ações</td>
+            <td>{{ data.dataCadastro | date: "dd/MM/yyyy"}}</td>
+            <td>
+                <button (click)="atualizar(data.id)" nz-button nzType="primary" nzShape="circle"><i nz-icon nzType="edit"></i></button>
+                <button (click)="delete(data.id)" nz-button nzType="primary" nzShape="circle"><i nz-icon nzType="delete"></i></button>
+            </td>
         </tr>
     </tbody>
 </nz-table>
